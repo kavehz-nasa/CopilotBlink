@@ -7,7 +7,7 @@ import Copilot.Compile.C99
 import Prelude hiding ((++), not)
 
 pattern :: Stream Bool
-pattern = [True, False, False, False, True, True, True, False] ++ pattern
+pattern = [True, False, True, True, True, False, False, False] ++ pattern
 
 spec :: Spec
 spec = do

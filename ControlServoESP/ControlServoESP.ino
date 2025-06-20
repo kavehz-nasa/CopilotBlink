@@ -17,6 +17,9 @@ void setup()
     ESP32PWM::allocateTimer(3);
     myServo.setPeriodHertz(50);
     myServo.attach(SERVO_PIN, 500, 2400);
+    // Reset to original position
+    myServo.write(pos);
+    delay(100);
 }
 
 void rotateLeft(bool rotateLeft_arg0)
@@ -36,5 +39,5 @@ void rotateRight(bool rotateRight_arg0)
 void loop()
 {
     myStep();
-    delay(200);
+    delay(1000);
 }

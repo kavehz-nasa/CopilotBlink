@@ -7,7 +7,7 @@
 #include "controlServo_types.h"
 #include "controlServo.h"
 
-static bool s0[(8)] = {(true), (false), (false), (false), (true), (true), (true), (false)};
+static bool s0[(8)] = {(true), (false), (true), (true), (true), (false), (false), (false)};
 static size_t s0_idx = (0);
 
 static bool s0_get(size_t x) {
