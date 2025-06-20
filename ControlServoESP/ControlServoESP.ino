@@ -7,6 +7,7 @@ extern "C" {
 Servo myServo;
 
 const int SERVO_PIN = 13;
+int pos = 0;
 
 void setup()
 {
@@ -20,18 +21,20 @@ void setup()
 
 void rotateLeft(bool rotateLeft_arg0)
 {
-    int pos = 30;
+    pos += 30;
     myServo.write(pos);
+    delay(100);
 }
 
 void rotateRight(bool rotateRight_arg0)
 {
-    
+    pos -= 30;
     myServo.write(pos);
+    delay(100);
 }
 
 void loop()
 {
     myStep();
-    delay(100);
+    delay(200);
 }
